@@ -1,4 +1,4 @@
-# 🎬 StreamVerse  
+# 🎬 M-CODE  
 A Netflix + Prime Video inspired streaming platform clone built using modern React stack including Hooks, State Management, Navigation, and Slick Carousel for a smooth UI/UX.
 
 ## 🚀 Project Overview  
