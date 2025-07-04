@@ -1,0 +1,122 @@
+.movie-detail-container .slick-prev,
+.movie-detail-container .slick-next {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+}
+
+.movie-detail-container .slick-prev:before,
+.movie-detail-container .slick-next:before {
+  font-size: 30px;
+  color: #fff;
+}
+
+.movie-detail-container .hover-card {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+.movie-detail-container .movie-card-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+.movie-detail-container button {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .movie-hero .col-md-8 {
+    padding-left: 0 !important;
+    text-align: center !important;
+    margin-top: 30px;
+  }
+  
+  .movie-hero h1 {
+    font-size: 2rem !important;
+  }
+  
+  .movie-hero .container {
+    padding: 0 15px;
+  }
+  
+  .movie-hero {
+    padding: 40px 15px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .movie-detail-container .custom-prev-arrow {
+    left: 10px !important;
+  }
+
+    .movie-detail-container .hover-info {
+    display: none !important;
+  }
+  
+  .movie-detail-container .custom-next-arrow {
+    right: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-hero h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .movie-hero p {
+    font-size: 1rem !important;
+  }
+  
+  .related-movies-section h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .related-movies-section {
+    padding: 40px 15px !important;
+  }
+
+  
+}
+
+.movie-detail-container .movie-card-wrapper {
+  transition: all 0.3s ease;
+}
+
+.movie-detail-container .movie-image-container {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .movie-hero .row {
+    flex-direction: column;
+  }
+  
+  .movie-hero .col-md-4,
+  .movie-hero .col-md-8 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  
+  .movie-hero button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-detail-container .slick-list {
+    padding: 0 !important;
+  }
+  
+  .movie-detail-container .movie-slide {
+    padding: 0 5px !important;
+  }
+}

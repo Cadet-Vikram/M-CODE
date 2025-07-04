@@ -1,0 +1,378 @@
+.movie-section-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+  overflow: visible;
+  background-color: black;
+}
+
+.movie-badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: black;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.movie-section-wrapper:hover {
+  z-index: 10;
+}
+
+.movie-slide {
+  padding: 10px 15px;
+  position: relative;
+  z-index: 1;
+  height: 270px;
+  overflow: visible;
+  background-color: black;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.movie-slide:hover,
+.movie-slide:has(.hover-card.active) {
+  z-index: 100000;
+}
+
+.hover-card {
+  position: relative;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1;
+  transform-origin: center bottom;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.hover-card.active {
+  transform: scale(1.1) translateY(-20px);
+  z-index: 99999;
+}
+
+
+.hover-card::after {
+  content: '';
+  position: absolute;
+  top: 210px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  z-index: 99998;
+  pointer-events: auto;
+}
+
+.hover-card.active::after {
+  pointer-events: auto;
+}
+
+.thumbnail-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid goldenrod;
+}
+
+.hover-card.active .thumbnail-wrapper {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.movie-thumbnail {
+  width: 300px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.movie-thumbnail.hovered {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.hover-card.active .movie-thumbnail {
+  height: 210px;
+  width: 300px;
+  border-radius: 16px 16px 0 0;
+}
+
+.movie-info {
+  position: absolute;
+  top: 210px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 15px 12px;
+  border-radius: 0 0 16px 16px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 100000;
+  pointer-events: none;
+  min-height: 120px;
+  cursor: default;
+}
+
+.hover-card.active .movie-info {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  background-color: rgba(18, 18, 18, 0.98);
+  backdrop-filter: blur(10px);
+}
+
+
+
+.movie-info:hover {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+.movie-info h5 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  color: white;
+  font-weight: 600;
+}
+
+.movie-info p {
+  font-size: 13px;
+  color: #ccc;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.watch-button {
+  padding: 8px 16px;
+  font-size: 13px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.watch-button:hover {
+  background-color: #b00610;
+}
+
+.slick-track {
+  overflow: visible !important;
+}
+
+.slick-slide {
+  overflow: visible !important;
+}
+
+.slick-list {
+  overflow: visible !important;
+}
+
+.movie-section-wrapper .slick-slider {
+  overflow: visible !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.movie-section-wrapper .slick-prev,
+.movie-section-wrapper .slick-next {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.movie-section-wrapper:hover .slick-prev,
+.movie-section-wrapper:hover .slick-next {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.041);
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  transition: background-color 0.3s ease;
+  top: 50%;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(255, 255, 255, 0.181);
+}
+
+.slick-prev::after,
+.slick-next::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 25px;
+  color: white;
+}
+
+.slick-prev::after {
+  content: "\f104";
+}
+
+.slick-next::after {
+  content: "\f105";
+}
+
+.slick-prev {
+  left: -5px !important;
+}
+
+.slick-next {
+  right: -5px !important;
+}
+
+body, html {
+  overflow-x: hidden;
+  position: relative;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  overflow: visible !important;
+}
+
+@media (min-width:1550px) {
+  .hover-card{
+    margin: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .movie-thumbnail {
+    height: 240px;
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+    transition: border-radius 0.3s, object-fit 0.3s;
+  }
+
+  .hover-card.active .movie-thumbnail {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-section-wrapper {
+    padding: 0 10px;
+  }
+
+  .hover-card{
+    margin: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+  }
+
+  .movie-slide {
+    padding: 5px;
+  }
+
+  .movie-thumbnail {
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .movie-info h5 {
+    font-size: 0.95rem;
+    margin: 5px 0 2px;
+  }
+
+  .movie-info p {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  .watch-button {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .movie-badge {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+    top: 6px;
+    left: 6px;
+    border-radius: 4px;
+  }
+
+  .slick-slider {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-slide {
+    padding: 4px;
+  }
+
+  .movie-thumbnail{
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .hover-card{
+    margin:5px;
+    height: 200px;
+  }
+
+  .movie-info h5 {
+    font-size: 0.9rem;
+  }
+
+  .movie-info p {
+    font-size: 0.8rem;
+  }
+
+  .watch-button {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}

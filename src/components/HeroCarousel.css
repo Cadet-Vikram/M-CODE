@@ -1,0 +1,260 @@
+.hero-carousel-wrapper {
+  padding: 4px;
+  margin: 20px;
+  background-color: #000;
+}
+
+.hero-carousel {
+  position: relative;
+  overflow: visible;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  background-color: #000;
+}
+
+.carousel-slide {
+  position: relative;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  transition: filter 0.4s ease-in-out;
+  margin-bottom: 20px;
+  background-color: black;
+  animation: zoomFade 10s ease-in-out infinite;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 16px;
+  border: 4px solid goldenrod;
+}
+
+.carousel-slide:hover {
+  filter: brightness(70%);
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2));
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.carousel-background {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  filter: brightness(1.5);
+}
+
+.carousel-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 60%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-slide:hover .carousel-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.02);
+}
+
+.carousel-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.carousel-description {
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.carousel-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+
+.slick-dots {
+  bottom: 20px;
+  z-index: 10;
+  display: block !important;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+  color: grey !important;
+  opacity: 0.7 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: gold !important;
+}
+
+.hero-carousel .slick-slider {
+  overflow: visible !important;
+}
+
+
+.slick-prev, .slick-next {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 35px;
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+  opacity: 1;
+}
+
+@media(min-width: 1550px){
+  .carousel-slide{
+    height: 900px;
+  }
+
+  .carousel-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    width: 900px;
+  }
+
+  .carousel-title{
+    font-size: 70px;
+  }
+
+  .carousel-description{
+    font-size: 40px;
+  }
+
+  .btn{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    height: 600px;
+  }
+
+  .carousel-image {
+    object-fit: cover;
+    object-position: center top;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .gradient-overlay {
+    padding: 15px;
+    align-items: flex-end;
+  }
+
+  .carousel-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .carousel-title {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel-description {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    line-height: 1.2rem;
+  }
+
+  .carousel-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    height: 500px;
+  }
+
+    .carousel-content {
+    padding: 10px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .carousel-title {
+    font-size: 1rem;
+  }
+
+  .carousel-description {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+}
